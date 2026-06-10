@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class SliderController : MonoBehaviour
 {
-    [Header("Referencias")]
+    [Header("References")]
 
     [Tooltip("Toggle responsavel por controlar a edição dos slider.")]
     [SerializeField] private Toggle lockToggle;
@@ -14,6 +14,17 @@ public class SliderController : MonoBehaviour
 
     [Tooltip("Slider subordinado 2")]
     [SerializeField] private Slider rotationSlider;
+
+    [Header("Test")]
+    [SerializeField] private bool enabledSlider = false;
+    
+    [ContextMenu("Test")]
+    private void TestControlSlides(){
+        scaleSlider.interactable = enabledSlider;
+        rotationSlider.interactable = enabledSlider;
+
+        
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

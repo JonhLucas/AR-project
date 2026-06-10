@@ -14,6 +14,16 @@ public class SliderScaleController : MonoBehaviour
 
     private Vector3 initialScale;
 
+    [Header("Test")]
+    [SerializeField] private float testScale = 0.5f;
+    
+    [ContextMenu("Test scale")]
+    private void TestScale(){
+        Debug.Log($"Scale factor {testScale} - {Vector3.one * testScale}");
+        transform.localScale = Vector3.one * testScale;
+    }
+    
+
     private void Start(){
         if (scaleSlider == null){
             Debug.LogError("Uma das referecias não foi atribuida.");
@@ -25,7 +35,6 @@ public class SliderScaleController : MonoBehaviour
 
         scaleSlider.onValueChanged.AddListener(UpdateScale);
         UpdateScale(scaleSlider.value);
-        // UpdateScale(factor);
 
     }
 

@@ -10,8 +10,16 @@ public class SliderRotationController : MonoBehaviour
 
     private Quaternion initialRotation;
 
-    // [Tooltip("Objeto que terá sua rotação alterada no eixo Y.")]
-    // [SerializeField] private Transform targetObject;
+    [Header("Test")]
+    [SerializeField] private float testAngle = 45f;
+    
+    [ContextMenu("Test rotation")]
+    private void TestRotation(){
+        Vector3 rotation = transform.localEulerAngles;
+        rotation.y = testAngle;
+        transform.localEulerAngles = rotation;
+    }
+    
 
     private void Start(){
         if (rotationSlider == null || transform == null){
