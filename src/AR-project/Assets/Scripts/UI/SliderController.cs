@@ -29,11 +29,11 @@ public class SliderController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UpdateSliderState(lockToggle.isOn);
-        lockToggle.onValueChanged.AddListener(UpdateSliderState);
+        // UpdateSliderState(lockToggle.isOn);
+        // lockToggle.onValueChanged.AddListener(UpdateSliderState);
     }
 
-    private void UpdateSliderState(bool isOn){
+    public void UpdateSliderState(bool isOn){
         scaleSlider.interactable = isOn;
         rotationSlider.interactable = isOn;
     }

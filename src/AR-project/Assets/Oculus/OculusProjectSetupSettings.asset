@@ -19,7 +19,9 @@ MonoBehaviour:
     - Meta.XR.SDK.fb94093919708b05a2082822adc7abd5.Ignored.Standalone
     - Meta.XR.SDK.31736735fee7ab217bea57cc359d9f23.MarkedAsFixed.Standalone
     - Meta.XR.SDK.edfb6eef6866b340551639f2f2c3213d.MarkedAsFixed.Standalone
-    values: 0101010101
+    - Meta.XR.SDK.db3015e9c6512f876f805e2f980c23f5.Ignored.WebGL
+    - Meta.XR.SDK.36d4c38c1a9e8a369725c8d57a25daf8.Ignored.WebGL
+    values: 01010101010101
   intProperties:
     keys: []
     values: 
